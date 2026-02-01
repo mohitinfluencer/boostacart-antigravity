@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { verifySession } from "@/lib/admin-auth"
 
+export const dynamic = "force-dynamic"
+
 export async function GET() {
   try {
     const session = await verifySession()
