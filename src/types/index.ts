@@ -3,12 +3,12 @@ export interface Store {
   name: string
   domain: string
   shopify_domain?: string
-  plan: "Free" | "Starter" | "Pro"
-  totalLeads: number
-  leadsThisMonth: number
-  remainingLeads: number
-  maxLeads: number
-  createdAt: string
+  plan: string
+  total_leads?: number
+  leads_this_month?: number
+  remaining_leads?: number
+  max_leads?: number
+  created_at?: string
   widgetSettings: WidgetSettings
   profile_id?: string
 }

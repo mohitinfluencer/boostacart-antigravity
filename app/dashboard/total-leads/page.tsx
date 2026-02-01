@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-export const dynamic = "force-dynamic"
+
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { Users, Download, Save, ArrowLeft, Check } from "lucide-react"
@@ -168,11 +168,10 @@ export default function TotalLeadsPage() {
 
   const showToast = (message: string, type: "success" | "error" = "success") => {
     const toast = document.createElement("div")
-    toast.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-[9999] animate-fade-in ${
-      type === "success"
+    toast.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-[9999] animate-fade-in ${type === "success"
         ? "bg-gradient-to-r from-green-500 to-emerald-500 text-white"
         : "bg-gradient-to-r from-red-500 to-pink-500 text-white"
-    }`
+      }`
     toast.textContent = message
     document.body.appendChild(toast)
     setTimeout(() => {
@@ -212,11 +211,10 @@ export default function TotalLeadsPage() {
               <button
                 onClick={handleSaveLeads}
                 disabled={isSaving}
-                className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg transition-all duration-300 shadow-lg ${
-                  isSaving
+                className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg transition-all duration-300 shadow-lg ${isSaving
                     ? "opacity-60 cursor-not-allowed"
                     : "hover:from-blue-700 hover:to-purple-700 hover:shadow-xl transform hover:scale-105"
-                }`}
+                  }`}
               >
                 {isSaving ? (
                   <>
@@ -285,9 +283,8 @@ export default function TotalLeadsPage() {
                   leads.map((lead) => (
                     <tr
                       key={lead.id}
-                      className={`hover:bg-white/5 transition-all duration-200 ${
-                        selectedLeads.has(lead.id) ? "bg-blue-500/10" : lead.is_saved ? "animate-flash-green" : ""
-                      }`}
+                      className={`hover:bg-white/5 transition-all duration-200 ${selectedLeads.has(lead.id) ? "bg-blue-500/10" : lead.is_saved ? "animate-flash-green" : ""
+                        }`}
                     >
                       <td className="px-6 py-4">
                         <input

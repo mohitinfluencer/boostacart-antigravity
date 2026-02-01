@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-export const dynamic = "force-dynamic"
+
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { Bookmark, Download, Trash2, ArrowLeft } from "lucide-react"
@@ -232,9 +232,8 @@ export default function SavedLeadsPage() {
                   leads.map((lead) => (
                     <tr
                       key={lead.id}
-                      className={`hover:bg-white/5 transition-colors duration-200 ${
-                        selectedLeads.has(lead.id) ? "bg-blue-500/10" : ""
-                      }`}
+                      className={`hover:bg-white/5 transition-colors duration-200 ${selectedLeads.has(lead.id) ? "bg-blue-500/10" : ""
+                        }`}
                     >
                       <td className="px-6 py-4">
                         <input

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-export const dynamic = "force-dynamic"
+
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
@@ -320,21 +320,19 @@ export default function Dashboard() {
           <div className="flex space-x-4 sm:space-x-8 min-w-max sm:min-w-0">
             <button
               onClick={() => setActiveTab("analytics")}
-              className={`py-4 px-2 sm:px-1 border-b-2 font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${
-                activeTab === "analytics"
+              className={`py-4 px-2 sm:px-1 border-b-2 font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${activeTab === "analytics"
                   ? "border-blue-400 text-blue-400"
                   : "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-500"
-              }`}
+                }`}
             >
               Analytics
             </button>
             <button
               onClick={() => setActiveTab("customization")}
-              className={`py-4 px-2 sm:px-1 border-b-2 font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${
-                activeTab === "customization"
+              className={`py-4 px-2 sm:px-1 border-b-2 font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${activeTab === "customization"
                   ? "border-blue-400 text-blue-400"
                   : "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-500"
-              }`}
+                }`}
             >
               Customization
             </button>
